@@ -1,0 +1,37 @@
+<FloatLayout>:
+    Painter:
+        id: painter
+    Button:
+        id: button1
+        text: "Clear"
+        font_size: 30
+        size_hint: 0.2, 0.25
+        pos_hint: {"top":1, "right":1}
+        on_release: painter.clear_canv(),
+    Button:
+        id: button2
+        font_size: 30
+        text: "Predict"
+        size_hint: 0.2,0.25
+        pos_hint: {"top":0.75, "right":1}
+        on_release: painter.predict()
+    Button:
+        id: button3
+        text: "<"
+        font_size: 30
+        size_hint: 0.1,0.25
+        pos_hint: {"top":0.50, "right":0.9}
+        on_release: painter.width_change(0)
+    Button:
+        id: button3
+        text: ">"
+        font_size: 30
+        size_hint: 0.1,0.25
+        pos_hint: {"top":0.50, "right":1}
+        on_release: painter.width_change(1)
+    Button:
+        id: button5
+        text: painter.text_box
+        font_size: 30
+        size_hint: 0.2,0.25
+        pos_hint: {"top":0.25, "right":1}
